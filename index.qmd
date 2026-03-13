@@ -1,33 +1,27 @@
 ---
-title: "Prediction-Based Inference: Methods & Applications"
-subtitle: "What do we do after we have machine learned everything?"
-date: 2026-03-17T13:45:00-05:00
+title: "Prediction-Based Inference Short Course"
+subtitle: "Methods & Applications"
+date: 2026-03-15T13:00:00-07:00
 date-format: "dddd, MMMM D, YYYY | h:mm a z"
 toc: true
 toc-location: right
 author: 
-  - name: Jesse Gronsbell, PhD
-    affiliation: University of Toronto
-  - name: Jianhu Gao, MS
-    affiliation: University of Toronto
-  - name: Stephen Salerno, PhD
-    affiliation: Fred Hutchinson Cancer Center
-date-title: "Date"
+  - name: Tyler H. McCormick
+date-title: "Time"
 listing:
   - id: core_units
     contents: 
       - content/Unit00_GettingStarted.qmd
+      - content/Unit02_MeasuringAdiposity.qmd
       - content/Unit01_AlphaFold.qmd
+      - content/Unit05_RashomonQuartet.qmd
     type: grid
     sort: "unit"
     filter-ui: false
     fields: [title, image, subtitle, description]
   - id: supplemental_units
     contents:
-      - content/Unit02_MeasuringAdiposity.qmd
       - content/Unit03_GeneticData.qmd
-#      - content/Unit04_Income.qmd
-      - content/Unit05_RashomonQuartet.qmd
     type: grid
     sort: "unit"
     filter-ui: false
@@ -39,7 +33,7 @@ listing:
 ::: {.hero-grid}
 
 ::: {.hero-diagram}
-![Source: [https://arxiv.org/pdf/2411.19908](https://arxiv.org/pdf/2411.19908)](/content/images/pbinference_gronsbell.PNG)
+![Source: [https://arxiv.org/pdf/2411.19908](https://arxiv.org/pdf/2411.19908)](content/images/pbinference_gronsbell.PNG)
 :::
 
 ::: {.goals-card}
@@ -60,27 +54,32 @@ listing:
 
 :::
 
-### Time Outline (105 minutes)
+### Time Outline (4 hours)
 
 | Activity                                                              | Time |
 | --------------------------------------------------------------------- | ---- |
-| [Overview](content/slides.qmd)                                        | 30 m |
+| [Overview & Introductions](content/slides.qmd)                        | 40 m |
 | Short Break                                                           | 5 m  |
-| [Unit 00: Getting Started](content/Unit00_GettingStarted.qmd)         | 30 m |
-| [Unit 01: AlphaFold](content/Unit01_AlphaFold.qmd)                    | 30 m |
-| Wrap-Up and Q&A                                                       | 10 m |
+| [Getting Started](content/Unit00_GettingStarted.qmd)                  | 30 m |
+| Break                                                                 | 20 m |
+| [Module 1: Measuring Adiposity](content/Unit02_MeasuringAdiposity.qmd)| 30 m |
+| Short Break                                                           | 5 m  |
+| [Module 2: Proteomics with AlphaFold](content/Unit01_AlphaFold.qmd)   | 30 m |
+| Break                                                                 | 20 m |
+| [Module 3: Rashomon Quartet](content/Unit05_RashomonQuartet.qmd)      | 40 m |
+| [Wrap-Up, Conclusions, and Questions](content/wrap_up.qmd)            | 20 m |
 
 ::: {.quickstart-block}
 ## Quick Start
 
 The companion website for this workshop is available at: 
 
-[https://salernos.github.io/ipd-workshop](https://salernos.github.io/ipd-workshop)
+[https://thmccormick.github.io/ipd-short-course](https://thmccormick.github.io/ipd-short-course)
 
 To use the workshop image:
 
 ```sh
-docker run -e PASSWORD=<choose_a_password_for_rstudio> -p 8787:8787 ghcr.io/salernos/ipd-workshop:latest
+docker run -e PASSWORD=<choose_a_password_for_rstudio> -p 8787:8787 ghcr.io/thmccormick/ipd-short-course:latest
 ```
 
 Once running, navigate to `http://localhost:8787/` and then log in with `rstudio`:`yourchosenpassword`. 
@@ -88,9 +87,9 @@ Once running, navigate to `http://localhost:8787/` and then log in with `rstudio
 Then [begin](content/Unit00_GettingStarted.qmd)!
 :::
 
-## Workshop Overview
+## Short Course Overview
 
-In this workshop, we explore the consequences of conducting inference on 
+In this short course, we explore the consequences of conducting inference on 
 predicted data across several applications and present a suite of 
 prediction-based (PB) inference methods that adjust for prediction-related 
 uncertainty to improve inference validity and efficiency. We also introduce [`ipd`](https://github.com/ipd-tools/ipd), a user-friendly `R` package that 
@@ -101,22 +100,22 @@ and diagnostics.
 
 ## Modules
 
-This workshop covers two modules, each illustrated with the 
+This short course covers four modules, each illustrated with the 
 [`ipd`](https://github.com/ipd-tools/ipd) package:[^cover-images]
 
 :::{#core_units}
 :::
 
-## Supplemental Modules
+## Supplemental Module
 
-We have also included some supplemental modules for you to explore on your own:
+We have also included an additional module for self-guided exploration:
 
 :::{#supplemental_units}
 :::
 
 ## Participation
 
-This workshop uses a blended format of **instruction** and 
+This short course uses a blended format of **instruction** and 
 **hands-on coding exercises**. Participants should:
 
 * Follow along in the virtual RStudio environment (see below).
@@ -130,12 +129,15 @@ This workshop uses a blended format of **instruction** and
 * Basic understanding of predictive (e.g., `randomForest`) and regression modeling (e.g., `lm`, `glm`).
 * Optional: Exposure to Bioconductor's `ExpressionSet`, `AnnotationDbi`, and `MLInterfaces` is helpful for one of the supplemental modules.
 
-## Contributors
+## Instructor and Acknowledgement
 
-**Presenters:**
-Jesse Gronsbell [&#x2709;&#xFE0E;](mailto:j.gronsbell@utoronto.ca), Jianhui Gao [&#x2709;&#xFE0E;](mailto:jianhui.gao@mail.utoronto.ca), Stephen Salerno [&#x2709;&#xFE0E;](mailto:ssalerno@fredhutch.org)
+**Presenter:**
+Tyler H. McCormick [&#x2709;&#xFE0E;](mailto:thmccormick@gmail.com)
 
-**All Contributors (Alphabetical Order):**
+**Acknowledgement:**
+This short course adapts and extends Stephen Salerno's original IPD workshop website and materials.
+
+**Original Workshop Contributors (Alphabetical Order):**
 Awan Afiaz [&#x2709;&#xFE0E;](mailto:aafiaz@uw.edu), David Cheng [&#x2709;&#xFE0E;](mailto:dcheng@mgh.harvard.edu), Jianhui Gao [&#x2709;&#xFE0E;](mailto:jianhui.gao@mail.utoronto.ca), Jesse Gronsbell [&#x2709;&#xFE0E;](mailto:j.gronsbell@utoronto.ca), Kentaro Hoffman [&#x2709;&#xFE0E;](mailto:khoffm3@uw.edu), Jeff Leek [&#x2709;&#xFE0E;](mailto:jtleek@fredhutch.org), Qiongshi Lu [&#x2709;&#xFE0E;](mailto:qlu@biostat.wisc.edu), Tyler McCormick [&#x2709;&#xFE0E;](mailto:tylermc@uw.edu), Jiacheng Miao [&#x2709;&#xFE0E;](mailto:jmiao24@wisc.edu), Anna Neufeld [&#x2709;&#xFE0E;](mailto:acn2@williams.edu), Stephen Salerno [&#x2709;&#xFE0E;](mailto:ssalerno@fredhutch.org)
 
 [^cover-images]: Module card cover images were generated by GPT-5.2.

@@ -5,7 +5,7 @@ description:  |
   Apply PB methods in a proteomics setting to estimate associations when key 
   outcomes are model-predicted rather than directly measured.
 image: images/alphafold_cover.png
-unit: 0
+unit: 2
 core: true
 format:
   html:
@@ -674,9 +674,7 @@ PB inference methods provide principled ways to bridge that gap.
 
 ---
 
-*This is the end of the module. We hope this was informative. For questions,*
-*comments, or suggestions, please reach out to Stephen Salerno* 
-*([ssalerno@fredhutch.org](mailto:ssalerno@fredhutch.org)*.
+*This is the end of the module. We hope this was informative. For questions, comments, or suggestions, please reach out to Tyler H. McCormick at [thmccormick@gmail.com](mailto:thmccormick@gmail.com).*
 
 *The exercises below are optional extensions for self-guided exploration.*
   

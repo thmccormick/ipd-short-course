@@ -5,7 +5,7 @@ description:  |
   Examine how equally predictive models can yield different scientific 
   conclusions and compare naive, classical, and PB inference.
 image: images/rashomon_cover.png
-unit: 0
+unit: 3
 core: true
 format:
   html:
@@ -554,4 +554,4 @@ ggpairs(
 
 ---
 
-*This is the end of the module. We hope this was informative! For question/concerns/suggestions, please reach out to ssalerno@fredhutch.org*
+*This is the end of the module. We hope this was informative. For questions, comments, or suggestions, please reach out to Tyler H. McCormick at [thmccormick@gmail.com](mailto:thmccormick@gmail.com).*

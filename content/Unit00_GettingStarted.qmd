@@ -945,4 +945,4 @@ Happy coding! Feel free to modify and extend these exercises for your own data.
 
 ---
 
-*This is the end of the module. We hope this was informative! For question/concerns/suggestions, please reach out to ssalerno@fredhutch.org*
+*This is the end of the module. We hope this was informative. For questions, comments, or suggestions, please reach out to Tyler H. McCormick at [thmccormick@gmail.com](mailto:thmccormick@gmail.com).*

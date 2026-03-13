@@ -1,1 +1,1 @@
-Sitemap: https://salernos.github.io/ipd-workshop/sitemap.xml
+Sitemap: https://thmccormick.github.io/ipd-short-course/sitemap.xml

@@ -5,8 +5,8 @@ description:  |
   Study BCR-ABL prediction from gene-expression profiles and evaluate how 
   PB inference methods calibrate downstream inference in genomics.
 image: images/genetics_cover.png
-unit: 0
-core: true
+unit: 4
+core: false
 format:
   html:
     toc: true
@@ -458,4 +458,4 @@ ggplot(combined, aes(x = estimate, y = term, color = method)) +
 
 ---
 
-*This is the end of the module. We hope this was informative! For question/concerns/suggestions, please reach out to ssalerno@fredhutch.org*
+*This is the end of the module. We hope this was informative. For questions, comments, or suggestions, please reach out to Tyler H. McCormick at [thmccormick@gmail.com](mailto:thmccormick@gmail.com).*

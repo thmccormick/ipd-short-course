@@ -1,43 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://salernos.github.io/ipd-workshop/content/Unit02_MeasuringAdiposity.html</loc>
-    <lastmod>2026-03-11T04:56:53.833Z</lastmod>
+    <loc>https://thmccormick.github.io/ipd-short-course/index.html</loc>
+    <lastmod>2026-03-13T14:49:21.703Z</lastmod>
   </url>
   <url>
-    <loc>https://salernos.github.io/ipd-workshop/content/slides.html</loc>
-    <lastmod>2026-03-13T01:05:42.506Z</lastmod>
+    <loc>https://thmccormick.github.io/ipd-short-course/content/setup.html</loc>
+    <lastmod>2026-03-13T14:49:21.704Z</lastmod>
   </url>
   <url>
-    <loc>https://salernos.github.io/ipd-workshop/content/Unit04_Income.html</loc>
-    <lastmod>2026-03-11T04:57:17.559Z</lastmod>
+    <loc>https://thmccormick.github.io/ipd-short-course/content/Unit01_AlphaFold.html</loc>
+    <lastmod>2026-03-13T14:49:21.706Z</lastmod>
   </url>
   <url>
-    <loc>https://salernos.github.io/ipd-workshop/content/Unit05_RashomonQuartet.html</loc>
-    <lastmod>2026-03-11T04:57:29.717Z</lastmod>
+    <loc>https://thmccormick.github.io/ipd-short-course/content/slides.html</loc>
+    <lastmod>2026-03-13T14:38:12.679Z</lastmod>
   </url>
   <url>
-    <loc>https://salernos.github.io/ipd-workshop/content/Unit03_GeneticData.html</loc>
-    <lastmod>2026-03-11T05:09:24.985Z</lastmod>
+    <loc>https://thmccormick.github.io/ipd-short-course/content/Unit00_GettingStarted.html</loc>
+    <lastmod>2026-03-13T14:49:21.707Z</lastmod>
   </url>
   <url>
-    <loc>https://salernos.github.io/ipd-workshop/index.html</loc>
-    <lastmod>2026-03-11T04:25:21.907Z</lastmod>
+    <loc>https://thmccormick.github.io/ipd-short-course/content/Unit04_Income.html</loc>
+    <lastmod>2026-03-13T14:38:12.492Z</lastmod>
   </url>
   <url>
-    <loc>https://salernos.github.io/ipd-workshop/content/setup.html</loc>
-    <lastmod>2026-03-13T03:51:58.658Z</lastmod>
+    <loc>https://thmccormick.github.io/ipd-short-course/content/information.html</loc>
+    <lastmod>2026-03-13T14:49:21.704Z</lastmod>
   </url>
   <url>
-    <loc>https://salernos.github.io/ipd-workshop/content/Unit01_AlphaFold.html</loc>
-    <lastmod>2026-03-12T18:25:33.946Z</lastmod>
+    <loc>https://thmccormick.github.io/ipd-short-course/content/Unit02_MeasuringAdiposity.html</loc>
+    <lastmod>2026-03-13T14:49:21.705Z</lastmod>
   </url>
   <url>
-    <loc>https://salernos.github.io/ipd-workshop/content/Unit00_GettingStarted.html</loc>
-    <lastmod>2026-03-13T03:47:08.520Z</lastmod>
+    <loc>https://thmccormick.github.io/ipd-short-course/content/wrap_up.html</loc>
+    <lastmod>2026-03-13T14:49:21.708Z</lastmod>
   </url>
   <url>
-    <loc>https://salernos.github.io/ipd-workshop/content/information.html</loc>
-    <lastmod>2026-03-11T04:39:11.097Z</lastmod>
+    <loc>https://thmccormick.github.io/ipd-short-course/content/Unit03_GeneticData.html</loc>
+    <lastmod>2026-03-13T14:49:21.707Z</lastmod>
+  </url>
+  <url>
+    <loc>https://thmccormick.github.io/ipd-short-course/content/Unit05_RashomonQuartet.html</loc>
+    <lastmod>2026-03-13T14:49:21.706Z</lastmod>
   </url>
 </urlset>

@@ -1,0 +1,52 @@
+---
+title: "Wrap-Up, Conclusions, and Questions"
+subtitle: "Key Ideas, Discussion, and Next Steps"
+description: "Closing session for the short course, including key takeaways and suggested next steps."
+format:
+  html:
+    toc: true
+    number-sections: false
+    code-fold: false
+---
+
+## What to Take Away from the Short Course
+
+By the end of this short course, you should be able to:
+
+1. Distinguish prediction tasks from downstream inference tasks.
+2. Explain why treating predicted outcomes as observed data can bias estimates and understate uncertainty.
+3. Use the `ipd` package to compare naive, classical, and prediction-based inference workflows.
+4. Recognize how the same statistical issues arise across epidemiology, proteomics, and model-interpretation examples.
+
+## Cross-Module Themes
+
+Across the modules, a few ideas repeat:
+
+* **Predictions can be useful without being interchangeable with truth.**
+* **A small labeled set can be enough to recover valid inference when used carefully.**
+* **Predictive accuracy alone is not a sufficient criterion for scientific conclusions.**
+* **Good workflows make the assumptions behind surrogate outcomes explicit.**
+
+## Questions for Discussion
+
+Use this session to revisit any of the following:
+
+* When does a surrogate or predicted outcome become too weak for downstream inference to be useful?
+* How large does the labeled sample need to be in a new application?
+* Which PB inference methods seem most appropriate for your own applied work?
+* What practical barriers would you face when adapting these methods to your data?
+
+## Next Steps
+
+If you want to keep exploring after the short course:
+
+* Revisit the [Getting Started](Unit00_GettingStarted.qmd) module to compare methods on simulated data.
+* Work through the [Additional Information](information.qmd) page for method summaries and references.
+* Explore the supplemental [BCR-ABL Fusion](Unit03_GeneticData.qmd) module if you want a genomics example.
+* Read more about the [`ipd` package](https://github.com/ipd-tools/ipd) and try adapting one of the workflows to your own problem.
+
+## Thanks
+
+This short course adapts and extends Stephen Salerno's original IPD workshop materials.
+
+For follow-up questions, please contact Tyler H. McCormick at [thmccormick@gmail.com](mailto:thmccormick@gmail.com).

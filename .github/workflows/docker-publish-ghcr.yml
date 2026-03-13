@@ -11,7 +11,7 @@ permissions:
   packages: write
 
 env:
-  IMAGE_NAME: ghcr.io/salernos/ipd-workshop
+  IMAGE_NAME: ghcr.io/thmccormick/ipd-short-course
 
 jobs:
   build:

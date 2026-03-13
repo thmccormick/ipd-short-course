@@ -5,7 +5,7 @@ description:  |
   Compare BMI and DXA-based adiposity measures and use PB corrections to 
   improve regression inference under predicted outcomes.
 image: images/adiposity_cover.png
-unit: 0
+unit: 1
 core: true
 format:
   html:
@@ -922,4 +922,4 @@ PB inference combines both cohorts to correct proxy-induced bias while leveragin
 
 ---
 
-*This is the end of the module. We hope this was informative! For question/concerns/suggestions, please reach out to ssalerno@fredhutch.org*
+*This is the end of the module. We hope this was informative. For questions, comments, or suggestions, please reach out to Tyler H. McCormick at [thmccormick@gmail.com](mailto:thmccormick@gmail.com).*

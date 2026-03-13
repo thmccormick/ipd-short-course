@@ -61,7 +61,7 @@ multiple scientific domains.
 | Unit           | Title                                                | Dataset          | Scientific Context                      | Role in the Workshop                                                                                            |
 | -------------- | ---------------------------------------------------- | ---------------- | --------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
 | Unit 00        | [Getting Started](Unit00_GettingStarted.qmd)         | Simulated        | General Statistical Setting             | Introduces labeled/unlabeled structure and core IPD ideas                                                       |
-| Unit 01        | [Proteomics with AlphaFold](Unit01_Alphafold.qmd)    | AlphaFold / PTM  | Proteomics and Structural Biology       | Studies the association between PTMs and disorder when disorder is predicted at scale with novel AI methods     |
+| Unit 01        | [Proteomics with AlphaFold](Unit01_AlphaFold.qmd)    | AlphaFold / PTM  | Proteomics and Structural Biology       | Studies the association between PTMs and disorder when disorder is predicted at scale with novel AI methods     |
 | Unit 02        | [Measuring Adiposity](Unit02_MeasuringAdiposity.qmd) | NHANES           | Public Health and Epidemiology          | Introduces a non-AI/ML example of BMI as a surrogate for adiposity and highlights data structure considerations |
 | Unit 03        | [BCR-ABL Fusion](Unit03_GeneticData.qmd)             | ALL / Golub      | Genomics and Molecular Classification   | Provides a gene expression example, using data and methods from [Bioconductor](https://www.bioconductor.org/)   |
 | Unit 04        | [The Rashomon Quartet](Unit05_RashomonQuartet.qmd)   | Rashomon Quartet | Prediction Ambiguity and Interpretation | Shows that similar predictive performance can still support very different downstream conclusions               |
@@ -279,5 +279,5 @@ can us use these tools while ensuring principled statistical inference.
 
 ---
 
-*For questions or feedback, please contact* 
-*Stephen Salerno ([ssalerno@fredhutch.org](mailto:ssalerno@fredhutch.org))*.
+*For questions or feedback, please contact*
+*Tyler H. McCormick ([thmccormick@gmail.com](mailto:thmccormick@gmail.com))*.

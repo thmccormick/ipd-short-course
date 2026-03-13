@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: ghcr.io/salernos/ipd-workshop:latest
+    image: ghcr.io/thmccormick/ipd-short-course:latest
     container_name: ipd-workshop-rstudio
     ports:
       - "8787:8787"

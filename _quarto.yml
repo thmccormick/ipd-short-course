@@ -6,18 +6,18 @@ project:
   
 website:
   page-navigation: true
-  title: "Prediction-Based Inference: Methods & Applications"
-  description: "Workshop Materials for Prediction-Based Inference: Methods & Applications"
-  site-url: "https://salernos.github.io/ipd-workshop/"
+  title: "Prediction-Based Inference Short Course"
+  description: "Short-course materials for Prediction-Based Inference: Methods & Applications"
+  site-url: "https://thmccormick.github.io/ipd-short-course/"
 
-  repo-url: https://github.com/salernos/ipd-workshop
+  repo-url: https://github.com/thmccormick/ipd-short-course
   repo-actions: [edit, issue]
   
   open-graph: true
   
   page-footer:
     right: "Proudly built with [OTTR](https://www.ottrproject.org/) and [Quarto](https://quarto.org/)."
-    left: "&copy; Copyright 2026, Jesse Gronsbell, Jianhui Gao, and Stephen Salerno"
+    left: "&copy; Copyright 2026, Tyler H. McCormick"
     background: "#F4F4F4"
   
   sidebar:
@@ -33,17 +33,13 @@ website:
         href: https://github.com/ipd-tools
         text: "GitHub Organization"
       - icon: code-square
-        href: https://github.com/salernos/ipd-workshop
+        href: https://github.com/thmccormick/ipd-short-course
         text: "Source Code"
       - icon: person-fill
-        text: "Presenters"
+        text: "Presenter"
         menu:
-          - text: Jesse Gronsbell, PhD
-            url: https://sites.google.com/view/jgronsbell/home
-          - text: Jianhui Gao, MS
-            url: https://sites.google.com/view/jianhuigao
-          - text: Stephen Salerno, PhD
-            url: https://salernos.github.io/
+          - text: Tyler H. McCormick
+            url: https://thmccormick.github.io/
           
     style: "docked"
     search: true
@@ -51,30 +47,30 @@ website:
     contents:
       - text: "Home"
         href: index.qmd
+      - text: "Overview"
+        href: content/slides.qmd
       - section: "Resources"
         contents:
           - text: "Setup & Prerequisites"
             href: content/setup.qmd
           - text: "Additional Information"
             href: content/information.qmd
-      - text: "Overview"
-        href: content/slides.qmd
       - section: "Modules"
         contents:
           - text: "Getting Started"
             href: content/Unit00_GettingStarted.qmd
-          - text: "Proteomics with AlphaFold"
-            href: content/Unit01_AlphaFold.qmd
-      - section: "Supplemental Modules"
-        contents:
           - text: "Measuring Adiposity"
             href: content/Unit02_MeasuringAdiposity.qmd
-          - text: "BCR-ABL Fusion"
-            href: content/Unit03_GeneticData.qmd
-#          - text: "Income Inequality"
-#            href: content/Unit04_Income.qmd
+          - text: "Proteomics with AlphaFold"
+            href: content/Unit01_AlphaFold.qmd
           - text: "The Rashomon Quartet"
             href: content/Unit05_RashomonQuartet.qmd
+      - text: "Wrap-Up, Conclusions, and Questions"
+        href: content/wrap_up.qmd
+      - section: "Supplemental Module"
+        contents:
+          - text: "BCR-ABL Fusion"
+            href: content/Unit03_GeneticData.qmd
             
 format:
   html:
