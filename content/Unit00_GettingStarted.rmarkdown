@@ -18,6 +18,8 @@ execute:
   message: false
 ---
 
+
+
 ## Overview
 
 Welcome to this workshop on *Prediction-Based (PB) Inference*.
@@ -69,6 +71,8 @@ In this unit, we will:
 
 First, make sure you have the `ipd` package and a few supporting packages installed:
 
+
+
 ```{r setup}
 #| code-fold: show
 # Install these packages if you have not already:
@@ -80,6 +84,8 @@ library(broom)
 library(tidyverse)
 library(patchwork)
 ```
+
+
 
 Throughout the workshop, we will use reproducible seeds and [`tidyverse`](https://www.tidyverse.org/) conventions.
 
@@ -130,6 +136,8 @@ Like many model objects in R, `ipd` fits work with familiar helper functions:
 ## Simulating Data
 
 The `ipd` package provides a function for simulating data based on the approach in [Wang et al. (2020)](https://www.pnas.org/doi/10.1073/pnas.2001238117). We provide more detail about this function at the end of this model. Here, we will be generating synthetic data following [Gronsbell et al. (2026)](https://arxiv.org/pdf/2411.19908) and [Ji et al. (2025)](https://arxiv.org/pdf/2501.09731) to better illustrate the core principles of PB inference in a more straightforward manner. We provide helper functions below to simulate data from a linear regression model.
+
+
 
 ```{r}
 #--- Function for the l2 Norm
@@ -217,6 +225,8 @@ simple_data_gen <- function(
 
 ```
 
+
+
 ### Exercise 1: Data Generation
 
 Let us generate a synthetic dataset for a linear model with:
@@ -236,6 +246,8 @@ The first setting is an 'ideal' setting that mimics when the prediction is deriv
 ::: {.callout-note collapse="true"}
 
 ## Answer
+
+
 
 ```{r}
 set.seed(123)
@@ -272,6 +284,8 @@ dat_ipd |>
   summarize(n = n()) 
 ```
 
+
+
 :::
 
 Let us also inspect the first few rows of each subset:
@@ -279,6 +293,8 @@ Let us also inspect the first few rows of each subset:
 ::: {.callout-note collapse="true"}
 
 ## Answer
+
+
 
 ```{r}
 # Labeled set
@@ -291,6 +307,8 @@ dat_ipd |>
   filter(set_label == "unlabeled") |>
   glimpse()
 ```
+
+
 
 :::
 
@@ -321,12 +339,14 @@ plotting:
 
 ## Answer
 
+
+
 ```{r, out.width="100%", dpi=300}
 # Prepare data
 dat_visualize <- dat_ipd |> 
   select(x1, y, f) |>
   pivot_longer(y:f, names_to = "Measure", values_to = "Value") |>
-  arrange(desc(Measure))
+  arrange(Measure)
 
 # Scatter + trend lines
 ggplot(dat_visualize, aes(x = x1, y = Value, color = Measure)) +
@@ -355,6 +375,8 @@ ggplot(dat_visualize, aes(x = Value, fill = Measure)) +
   ) +
   theme(legend.position = "bottom")
 ```
+
+
 
 :::
 
@@ -389,6 +411,8 @@ Using the `labeled` and `unlabeled` sets, fit three models:
 
 ## Answer
 
+
+
 ```{r}
 # 1) Oracle: use the true outcomes for the full data (not possible in practice)
 oracle_model <- lm(y ~ x1, data = dat_ipd)
@@ -400,6 +424,8 @@ naive_model <- lm(f ~ x1, data = filter(dat_ipd, set_label == "unlabeled"))
 classical_model <- lm(y ~ x1, data = filter(dat_ipd, set_label == "labeled"))
 ```
 
+
+
 :::
 
 Let's also extract the coefficient summaries using the `tidy` method and compare the results of the three approaches:
@@ -407,6 +433,8 @@ Let's also extract the coefficient summaries using the `tidy` method and compare
 ::: {.callout-note collapse="true"}
 
 ## Answer
+
+
 
 ```{r}
 oracle_df <- tidy(oracle_model) |>
@@ -426,6 +454,8 @@ classical_df <- tidy(classical_model) |>
 
 bind_rows(oracle_df, naive_df, classical_df)
 ```
+
+
 
 :::
 
@@ -487,6 +517,8 @@ Let's call the method using the `ipd()` function and collect the estimate for th
 
 ## Answer
 
+
+
 ```{r}
 set.seed(123)
 
@@ -501,6 +533,8 @@ ipd_model <- ipd(
 ipd_model
 ```
 
+
+
 :::
 
 The `ipd_model` is an `S4` object with slots for things like the coefficient, se, ci, coefTable, fit, formula, data_l, data_u, method, model, and intercept. We can extract the coefficient table using `ipd`'s `tidy` helper and compare with the naive and classical methods:
@@ -508,6 +542,8 @@ The `ipd_model` is an `S4` object with slots for things like the coefficient, se
 ::: {.callout-note collapse="true"}
 
 ## Answer
+
+
 
 ```{r}
 # Extract the coefficient estimates
@@ -521,6 +557,8 @@ compare_tab <- bind_rows(oracle_df, naive_df, classical_df, ipd_df)
 compare_tab
 ```
 
+
+
 :::
 
 ### Exercise 5: Visualizing Uncertainty
@@ -530,6 +568,8 @@ Let's plot the coefficient estimates and 95% CIs for each of the naive, classica
 ::: {.callout-note collapse="true"}
 
 ## Answer
+
+
 
 ```{r, fig.width=6, fig.height=3}
 # Forest plot of estimates and 95% confidence intervals
@@ -549,6 +589,8 @@ compare_tab |>
     ) +
     theme_minimal()
 ```
+
+
 
 :::
 
@@ -578,6 +620,8 @@ We will compare these results with the ideal case in the previous exercises. Her
 
 ### Data Generation
 
+
+
 ```{r}
 set.seed(123)
 
@@ -594,7 +638,11 @@ dat_ipd2 <- simple_data_gen(
 )
 ```
 
+
+
 ### Plotting the Data
+
+
 
 ```{r, out.width="100%", dpi=300}
 # Prepare data
@@ -631,7 +679,11 @@ ggplot(dat_visualize2, aes(x = Value, fill = Measure)) +
   theme(legend.position = "bottom")
 ```
 
+
+
 ### Oracle vs Naive vs Classical Inference
+
+
 
 ```{r}
 
@@ -664,7 +716,11 @@ classical_df2 <- tidy(classical_model2) |>
 bind_rows(oracle_df2, naive_df2, classical_df2)
 ```
 
+
+
 ### PB Model Fitting via the Chen + Chen Estimator
+
+
 
 ```{r}
 set.seed(123)
@@ -692,7 +748,11 @@ compare_tab2 <- bind_rows(oracle_df2, naive_df2, classical_df2, ipd_df2)
 compare_tab2
 ```
 
+
+
 ### Visualizing Uncertainty
+
+
 
 ```{r, fig.width=6, fig.height=3}
 # Forest plot of estimates and 95% confidence intervals
@@ -712,6 +772,8 @@ compare_tab2 |>
     ) +
     theme_minimal()
 ```
+
+
 
 :::
 
@@ -734,7 +796,6 @@ compare_tab2 |>
 * The dashed red line is the *true* data-generating effect for $X_1$.
 * Compare how far each method's interval is from this line.
 * The **naive** approach severely underestimates both the effect estimate and its standard error, while **Chen + Chen** is unbiased and more efficient than the **classical** approach.
-* The efficiency gain is not as high compared to the perfect prediction scenario since the residual correlation between $y$ and $f$ is smaller
 
 :::
 
@@ -747,6 +808,8 @@ coefficient estimate and standard error for `X1` with the naive fit.
 
 ## Answer
 
+
+
 ```{r}
 tidy(ipd_model)
 glance(ipd_model)
@@ -755,6 +818,8 @@ augment(ipd_model) |> glimpse()
 # Compare with naive
 broom::tidy(naive_model)
 ```
+
+
 
 :::
 
@@ -821,6 +886,8 @@ Try generating data with the `simdat()` function. Let us generate a synthetic da
 
 ## Answer
 
+
+
 ```{r}
 set.seed(123)
 
@@ -852,6 +919,8 @@ dat |>
   summarize(n = n()) 
 ```
 
+
+
 :::
 
 Let us also inspect the first few rows of each subset:
@@ -859,6 +928,8 @@ Let us also inspect the first few rows of each subset:
 ::: {.callout-note collapse="true"}
 
 ## Answer
+
+
 
 ```{r}
 # Training set
@@ -876,6 +947,8 @@ dat |>
   filter(set_label == "unlabeled") |>
   glimpse()
 ```
+
+
 
 :::
 
@@ -902,6 +975,8 @@ Fit a *linear prediction model* on the training data:
 ::: {.callout-note collapse="true"}
 
 ## Answer
+
+
 
 ```{r}
 # 1) Subset training set
@@ -930,6 +1005,8 @@ dat |>
   glimpse()
 ```
 
+
+
 :::
 
 ::: {.callout-tip}
@@ -947,3 +1024,4 @@ Happy coding! Feel free to modify and extend these exercises for your own data.
 ---
 
 *This is the end of the module. We hope this was informative. For questions, comments, or suggestions, please reach out to Tyler H. McCormick at [thmccormick@gmail.com](mailto:thmccormick@gmail.com).*
+
