@@ -40,8 +40,6 @@ feasibility, but treating predictions as if they were observed data can bias
 effect estimates and understate uncertainty.
 :::
 
-<!--- Commenting this out for ENAR 2026 tutorial
-
 ## Setup 
 
 When an outcome, $Y$, is costly or difficult to measure, it can be tempting to 
@@ -144,8 +142,6 @@ Post-Prediction Adaptive Inference (**PSPA**) method of
 [Miao et al.](https://arxiv.org/abs/2311.14220) 
 to conduct valid, efficient inference, even when a large proportion of outcomes 
 are predicted. 
-
---->
 
 ## Slides (PDF)
 
